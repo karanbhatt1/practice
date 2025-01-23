@@ -1,0 +1,61 @@
+body{
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: palegreen;
+
+}
+.container{
+    align-self: center;
+    border: 2px solid;
+    background-color: rgb(58, 126, 58);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap:4px;
+    width: 70vw;
+    height:70vh;
+
+}
+h1{
+    color: goldenrod;
+    font-size: xxx-large;
+    border: 2px solid;
+    height: 1em;
+    text-align: center;
+    font-weight:900;
+    margin-bottom: 0px;
+
+}
+p{
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 2%;
+    margin-bottom: 0;
+}
+#message{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: larger;
+    font: bolder;
+    margin: 2%;
+    margin-bottom: 0;
+}
+#startGame{
+    margin-top: 1em;
+}
+button{
+    background-color: goldenrod;
+    color: #016f32;
+    height: 10%;
+    width: 15em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    border: black solid 2px ;
+    border-radius: 5px;
+
+}
