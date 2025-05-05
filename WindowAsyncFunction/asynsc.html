@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Karan Bhatt</h1>
+
+    <p id="res"></p>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+</body>
+<script>
+    //setTimeout() : a method which call an api
+    // These are not part of core javascript
+    //they are inherent in part of browser.
+    //Handler --> function 
+    // time in milliseconds
+    // function refrence can also be given in setTimeout();
+
+    const changeme = setTimeout(function(){
+        document.querySelector("h1").innerText = "This is setTimeout()";
+    },1000);
+    // To stop the change.
+    document.querySelector("#stop").addEventListener("click",function(){
+        clearTimeout(changeme) 
+        console.log("no change will be done! stopped");
+    })// it needs refrence of setTimeout which we want to clear;
+    // Runs a function once after specified time.
+
+    //setInterval(<handler>,timeout) // it repeadtly runs the function after every specified time.
+    const stbtn = document.querySelector("#start");
+    stbtn.addEventListener("click",function(){
+        setInterval((e)=>{
+            document.querySelector("#res").innerText = "hello";
+        },1000)
+    })
+
+
+</script>
+</html>

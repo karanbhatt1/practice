@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            Random Color Generator
+        </title>
+    </head>
+    <body bgcolor="#212121">
+
+        <h1>Enter start button to change the background color randomly</h1>
+        <h1>Enter stop button to stop the color change</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </body>
+    <script>
+        const stbtn = document.getElementById("start");
+        const stpbtn = document.getElementById("stop");
+
+        // Random color generation;
+        let clrvar = '0123456789ABCDEF';
+        let seti;
+
+        function generateRandomno(){
+            let rndmno = Math.floor(Math.random()*16);
+            return rndmno;
+        }
+        
+        function randomColor(){ 
+            let rndclr = "#";
+            for(let i =0;i<6;i++){
+                let rndn = generateRandomno();
+                rndclr = rndclr.concat(clrvar[rndn])
+            }
+            return rndclr;
+        }
+        stbtn.addEventListener("click",function(e){
+            
+                seti = setInterval(function(){
+                    let rndclr = randomColor();
+                    document.body.style.backgroundColor=`${rndclr}`;
+                },1500)   
+        })
+
+       stpbtn.addEventListener("click",function(e){
+            clearInterval(seti);
+            seti = null;
+       })
+        
+        
+
+    </script>
+</html>
